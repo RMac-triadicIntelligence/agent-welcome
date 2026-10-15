@@ -1,0 +1,28 @@
+{
+  "body": {
+    "actions": [
+      "browse",
+      "cart",
+      "buy",
+      "return"
+    ],
+    "agents_allowed": [
+      "grok-bot",
+      "example-agent"
+    ],
+    "agents_welcome": true,
+    "currency": "USD",
+    "issued_at": 1792000000,
+    "max_order_cents": 5000000,
+    "merchant": "tampered.example",
+    "protocols": [
+      "agent-welcome/0.1"
+    ],
+    "require_agent_id": true,
+    "require_delegation_receipt": true,
+    "spec": "agent-welcome/0.1",
+    "terms_url": "https://example.test/agent-terms"
+  },
+  "key": "5d818b5b351a582b0be39c7474fa6a8c7deee92b04bec437edecc9d5d183aaa8",
+  "sig": "4bb4fc3a4ee93d80d2324b151f5d34ff40df302c575627e6c75dd5fe232473f8d239541e383980975b3084469a745df9fdb41b16d240478643dcef90764c250c"
+}

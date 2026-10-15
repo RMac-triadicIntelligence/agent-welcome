@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent-welcome/0.1",
+  "title": "Signed agent-welcome manifest (served at /.well-known/agent-welcome.json)",
+  "type": "object",
+  "required": ["body", "key", "sig"],
+  "additionalProperties": false,
+  "properties": {
+    "key": {"type": "string", "pattern": "^[0-9a-f]{64}$", "description": "Ed25519 public key (raw, hex). Verifiers MUST pin it out of band; the manifest cannot vouch for its own key."},
+    "sig": {"type": "string", "pattern": "^[0-9a-f]{128}$", "description": "Ed25519 signature over canonical JSON of body (sorted keys, no whitespace, UTF-8)."},
+    "body": {
+      "type": "object",
+      "required": ["spec", "merchant", "agents_welcome", "agents_allowed", "actions", "max_order_cents", "require_agent_id", "terms_url", "issued_at"],
+      "additionalProperties": false,
+      "properties": {
+        "spec": {"const": "agent-welcome/0.1"},
+        "merchant": {"type": "string", "minLength": 1},
+        "agents_welcome": {"type": "boolean"},
+        "agents_allowed": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "actions": {"type": "array", "items": {"enum": ["browse", "cart", "buy", "return"]}, "uniqueItems": true},
+        "max_order_cents": {"type": "integer", "minimum": 0},
+        "currency": {"type": "string", "pattern": "^[A-Z]{3}$"},
+        "require_agent_id": {"type": "boolean"},
+        "require_delegation_receipt": {"type": "boolean"},
+        "terms_url": {"type": "string"},
+        "protocols": {"type": "array", "items": {"type": "string"}},
+        "issued_at": {"type": "integer"}
+      }
+    }
+  }
+}

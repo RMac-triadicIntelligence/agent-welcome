@@ -1,0 +1,202 @@
+{
+  "acceptance_sha256": "8d499872ccf226d117197bc907d4acb9b283c9ba58b2aee84cf63a6d4909bb5f",
+  "battery": "agent-welcome v1",
+  "cases": [
+    {
+      "expected": [
+        "ACCEPT",
+        "ok"
+      ],
+      "got": [
+        "ACCEPT",
+        "ok"
+      ],
+      "head": "5385b224390ad4422d80fc415053ce82e20c62df00ce9167ab78c197ddde3367",
+      "id": "C01",
+      "pass": true
+    },
+    {
+      "expected": [
+        "REFUSE",
+        "expired"
+      ],
+      "got": [
+        "REFUSE",
+        "expired"
+      ],
+      "head": null,
+      "id": "C02",
+      "pass": true
+    },
+    {
+      "expected": [
+        "REFUSE",
+        "nonce_replayed"
+      ],
+      "got": [
+        "REFUSE",
+        "nonce_replayed"
+      ],
+      "head": null,
+      "id": "C03",
+      "pass": true
+    },
+    {
+      "expected": [
+        "REFUSE",
+        "cart_mismatch"
+      ],
+      "got": [
+        "REFUSE",
+        "cart_mismatch"
+      ],
+      "head": null,
+      "id": "C04",
+      "pass": true
+    },
+    {
+      "expected": [
+        "REFUSE",
+        "manifest_bad_signature"
+      ],
+      "got": [
+        "REFUSE",
+        "manifest_bad_signature"
+      ],
+      "head": null,
+      "id": "C05",
+      "pass": true
+    },
+    {
+      "expected": [
+        "REFUSE",
+        "manifest_key_not_pinned"
+      ],
+      "got": [
+        "REFUSE",
+        "manifest_key_not_pinned"
+      ],
+      "head": null,
+      "id": "C06",
+      "pass": true
+    },
+    {
+      "expected": [
+        "REFUSE",
+        "agent_not_allowed"
+      ],
+      "got": [
+        "REFUSE",
+        "agent_not_allowed"
+      ],
+      "head": null,
+      "id": "C07",
+      "pass": true
+    },
+    {
+      "expected": [
+        "REFUSE",
+        "over_price_cap"
+      ],
+      "got": [
+        "REFUSE",
+        "over_price_cap"
+      ],
+      "head": null,
+      "id": "C08",
+      "pass": true
+    },
+    {
+      "expected": [
+        "REFUSE",
+        "missing_timestamp"
+      ],
+      "got": [
+        "REFUSE",
+        "missing_timestamp"
+      ],
+      "head": null,
+      "id": "C09",
+      "pass": true
+    },
+    {
+      "expected": [
+        "REFUSE",
+        "future_timestamp"
+      ],
+      "got": [
+        "REFUSE",
+        "future_timestamp"
+      ],
+      "head": null,
+      "id": "C10",
+      "pass": true
+    },
+    {
+      "expected": [
+        "REFUSE",
+        "merchant_refuses"
+      ],
+      "got": [
+        "REFUSE",
+        "merchant_refuses"
+      ],
+      "head": null,
+      "id": "C11",
+      "pass": true
+    },
+    {
+      "expected": [
+        "REFUSE",
+        "receipt_bad_signature"
+      ],
+      "got": [
+        "REFUSE",
+        "receipt_bad_signature"
+      ],
+      "head": null,
+      "id": "C12",
+      "pass": true
+    },
+    {
+      "expected": [
+        "REFUSE",
+        "state_head_mismatch"
+      ],
+      "got": [
+        "REFUSE",
+        "state_head_mismatch"
+      ],
+      "head": null,
+      "id": "C13",
+      "pass": true
+    },
+    {
+      "expected": [
+        "REFUSE",
+        "wrong_merchant"
+      ],
+      "got": [
+        "REFUSE",
+        "wrong_merchant"
+      ],
+      "head": null,
+      "id": "C14",
+      "pass": true
+    },
+    {
+      "expected": [
+        "REFUSE",
+        "over_merchant_cap"
+      ],
+      "got": [
+        "REFUSE",
+        "over_merchant_cap"
+      ],
+      "head": null,
+      "id": "C15",
+      "pass": true
+    }
+  ],
+  "overall": "PASS"
+}

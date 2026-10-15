@@ -1,0 +1,20 @@
+{
+  "body": {
+    "actions": [],
+    "agents_allowed": [],
+    "agents_welcome": false,
+    "currency": "USD",
+    "issued_at": 1792000000,
+    "max_order_cents": 50000,
+    "merchant": "refusing.example",
+    "protocols": [
+      "agent-welcome/0.1"
+    ],
+    "require_agent_id": true,
+    "require_delegation_receipt": true,
+    "spec": "agent-welcome/0.1",
+    "terms_url": "https://example.test/agent-terms"
+  },
+  "key": "d4255703b28493804ac638bf8052db30fceb5f40706278bae485c1239d766aed",
+  "sig": "0bbc49dfa2edd44e663aaafd633b142fea6c047c0b408ef2882d43c1b947365bfc0b2025f39e16da7ab101aee241a3fe26270973ea9dc51dbbd1c22fb1ed1407"
+}

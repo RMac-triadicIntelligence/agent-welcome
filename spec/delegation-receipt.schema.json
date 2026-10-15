@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent-delegation-receipt/0.1",
+  "title": "User-signed delegation receipt for one purchase",
+  "type": "object",
+  "required": ["body", "key", "sig"],
+  "properties": {
+    "key": {"type": "string", "pattern": "^[0-9a-f]{64}$", "description": "The user's Ed25519 key; the merchant must already hold it pinned for body.user."},
+    "sig": {"type": "string", "pattern": "^[0-9a-f]{128}$"},
+    "body": {
+      "type": "object",
+      "required": ["spec", "user", "merchant", "agent", "cart_digest", "price_cap_cents", "issued_at", "expires_at", "nonce"],
+      "additionalProperties": false,
+      "properties": {
+        "spec": {"const": "agent-delegation-receipt/0.1"},
+        "user": {"type": "string"},
+        "merchant": {"type": "string"},
+        "agent": {"type": "string"},
+        "cart_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "price_cap_cents": {"type": "integer", "minimum": 0},
+        "issued_at": {"type": "integer"},
+        "expires_at": {"type": "integer"},
+        "nonce": {"type": "string", "minLength": 16}
+      }
+    }
+  }
+}
